@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import Image from 'next/image';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -42,8 +43,14 @@ const Navbar = () => {
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
                     <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-[#E3CF80] to-[#C9A85D] rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-xl">MSJ</span>
+                        <div className="relative w-12 h-12 flex items-center justify-center">
+                            <Image
+                                src="/media/logo.png"
+                                alt="MSJ Logo"
+                                width={48}
+                                height={48}
+                                className="object-contain"
+                            />
                         </div>
                         <div className="flex flex-col">
                             <span className="font-bold text-lg text-[#100A06] leading-tight">MSJ Educational</span>
