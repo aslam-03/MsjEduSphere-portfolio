@@ -45,8 +45,9 @@ const About = () => {
                                 Empowering Students Since 2018
                             </h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                MSJ Educational Academy is a premier tuition center in Coimbatore dedicated to providing comprehensive academic support for students from Class 1 to 12.
-                                We focus on building strong conceptual foundations, enhancing exam confidence, and offering personalized mentoring to every student.
+                                MSJ Educational Academy is a premier institution in Coimbatore dedicated to providing holistic education from early childhood to competitive exam success.
+                                We offer a specialized Play School program for toddlers, comprehensive tuition for Classes 1 to 12, and intensive coaching for NEET & JEE aspirants.
+                                Our focus remains on building strong conceptual foundations, enhancing exam confidence, and offering personalized mentoring to every student at every stage.
                             </p>
                         </div>
 

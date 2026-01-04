@@ -1,10 +1,21 @@
 'use client';
 import React from 'react';
-import { Users, Target, CheckCircle, BarChart, MessageSquare, LucideIcon } from 'lucide-react';
+import { Users, Target, CheckCircle, BarChart, MessageSquare, BookOpen, Baby, Brain, Lightbulb, UserCheck, Microscope, LucideIcon } from 'lucide-react';
 import { mockData } from '../mock';
 
 const Methodology = () => {
-    const icons: LucideIcon[] = [Users, Target, CheckCircle, BarChart, MessageSquare];
+    // Flatten and tag the data for the timeline
+    const allMethods = [
+        ...mockData.methodology.playSchool.map(m => ({ ...m, category: 'Play School', icon: Baby })),
+        ...mockData.methodology.school.map(m => ({ ...m, category: 'School Tuition', icon: BookOpen })),
+        ...mockData.methodology.competitive.map(m => ({ ...m, category: 'NEET / JEE', icon: Target })),
+    ];
+
+    // Helper to get diverse icons if not provided in item
+    const getFallbackIcon = (index: number) => {
+        const icons = [Lightbulb, CheckCircle, BarChart, MessageSquare, UserCheck, Brain, Microscope];
+        return icons[index % icons.length];
+    };
 
     return (
         <section id="methodology" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -25,13 +36,13 @@ const Methodology = () => {
                     <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#E3CF80] via-[#557EAE] to-[#73826E]"></div>
 
                     <div className="space-y-12">
-                        {mockData.methodology.map((method: { id: number; title: string; description: string }, index: number) => {
-                            const Icon = icons[index] || Users; // Fallback to Users if index out of bounds
+                        {allMethods.map((method: any, index: number) => {
+                            const Icon = method.icon || getFallbackIcon(index);
                             const isEven = index % 2 === 0;
 
                             return (
                                 <div
-                                    key={method.id}
+                                    key={`${method.category}-${method.id}`}
                                     className={`relative lg:grid lg:grid-cols-2 gap-8 items-center ${!isEven ? 'lg:grid-flow-dense' : ''}`}
                                 >
                                     {/* Content Card */}
@@ -45,6 +56,11 @@ const Methodology = () => {
                                                 </div>
                                             </div>
                                             <div className="flex-1">
+                                                <div className="flex justify-between items-center mb-2">
+                                                    <span className="text-xs font-bold text-[#C9A85D] uppercase tracking-wider bg-[#E3CF80]/10 px-2 py-1 rounded">
+                                                        {method.category}
+                                                    </span>
+                                                </div>
                                                 <h3 className="text-xl font-bold text-[#100A06] mb-2">{method.title}</h3>
                                                 <p className="text-gray-700 leading-relaxed">{method.description}</p>
                                             </div>

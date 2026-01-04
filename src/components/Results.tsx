@@ -1,7 +1,7 @@
 'use client';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import { Trophy, Users, Award, Target } from 'lucide-react';
+import { Trophy, Users, Award, Target, Star } from 'lucide-react';
 
 const CountUp = ({ end, duration = 2 }: { end: number, duration?: number }) => {
     const [count, setCount] = useState(0);
@@ -33,14 +33,14 @@ const Results = () => {
     const achievementCards = [
         {
             icon: Users,
-            value: 500,
+            value: 100,
             suffix: '+',
             label: 'Students Taught',
             color: 'from-[#557EAE] to-[#73826E]'
         },
         {
             icon: Trophy,
-            value: 95,
+            value: 100,
             suffix: '%',
             label: 'Pass Percentage',
             color: 'from-[#E3CF80] to-[#C9A85D]'
@@ -96,6 +96,34 @@ const Results = () => {
                     })}
                 </div>
 
+                {/* Upcoming Achievements */}
+                <div className="mt-20">
+                    <div className="text-center mb-10">
+                        <h3 className="text-2xl font-bold text-[#100A06] bg-[#E3CF80]/20 inline-block px-6 py-2 rounded-full">
+                            Upcoming Achievements (2025-26)
+                        </h3>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div className="bg-gradient-to-r from-[#557EAE]/5 to-[#73826E]/5 rounded-xl p-6 border border-dashed border-[#557EAE] flex items-center justify-between">
+                            <div>
+                                <h4 className="font-bold text-lg text-[#100A06]">NEET Selections</h4>
+                                <p className="text-gray-500 text-sm">Targeting Top Medical Colleges</p>
+                            </div>
+                            <span className="bg-[#557EAE] text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">
+                                Results Awaited
+                            </span>
+                        </div>
+                        <div className="bg-gradient-to-r from-[#557EAE]/5 to-[#73826E]/5 rounded-xl p-6 border border-dashed border-[#73826E] flex items-center justify-between">
+                            <div>
+                                <h4 className="font-bold text-lg text-[#100A06]">JEE Qualifications</h4>
+                                <p className="text-gray-500 text-sm">Aiming for IITs & NITs</p>
+                            </div>
+                            <span className="bg-[#73826E] text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">
+                                Results Awaited
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
