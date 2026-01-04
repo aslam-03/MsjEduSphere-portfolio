@@ -25,17 +25,21 @@ const Hero = () => {
                         </div>
 
                         <h1 className="text-5xl lg:text-6xl font-bold text-[#100A06] leading-tight">
-                            Complete Academic Support for{' '}
+                            A Complete Learning Journey Under{' '}
                             <span className="text-[#557EAE] relative whitespace-nowrap">
-                                Classes 1–12
+                                One Roof
                                 <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 4 Q150 8 300 4" stroke="#E3CF80" strokeWidth="3" fill="none" />
                                 </svg>
                             </span>
                         </h1>
 
-                        <p className="text-xl text-gray-700 leading-relaxed lg:whitespace-nowrap">
-                            CBSE & Tamil Nadu State Board | Personal Attention | Proven Results
+                        <div className="text-xl lg:text-2xl font-medium text-[#C9A85D] mt-4">
+                            Play School • Academic Coaching (Classes 1–12) • NEET • JEE 
+                        </div>
+
+                        <p className="text-xl text-gray-700 leading-relaxed lg:whitespace-nowrap mt-4">
+                            Concept-Driven Learning | CBSE & State Board | Result-Oriented Teaching
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -60,7 +64,7 @@ const Hero = () => {
                                     <Users className="text-[#557EAE]" size={24} />
                                 </div>
                                 <div>
-                                    <div className="font-bold text-2xl text-[#100A06]">500+</div>
+                                    <div className="font-bold text-2xl text-[#100A06]">100+</div>
                                     <div className="text-sm text-gray-600">Students</div>
                                 </div>
                             </div>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Gallery = () => {
     return (
-        <section className="py-20 bg-white">
+        <section id="gallery" className="py-20 bg-white">
             <div className="container mx-auto px-4 md:px-8">
                 <h2 className="font-heading text-3xl font-bold text-center text-msj-text mb-12">
                     Campus Gallery

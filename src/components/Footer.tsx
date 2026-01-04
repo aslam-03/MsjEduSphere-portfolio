@@ -88,11 +88,15 @@ const Footer = () => {
                     {/* Programs */}
                     <div>
                         <h3 className="text-xl font-bold mb-6 text-[#E3CF80]">Our Programs</h3>
+                        <div className="text-sm font-semibold text-gray-400 mb-4 pb-2 border-b border-gray-700">
+                            Play School | Classes 1–12 | NEET | JEE
+                        </div>
                         <ul className="space-y-3 text-gray-300">
-                            <li>Classes 1-5 (Primary)</li>
-                            <li>Classes 6-8 (Middle School)</li>
-                            <li>Classes 9-10 (High School)</li>
-                            <li>Classes 11-12 (Higher Secondary)</li>
+                            <li>Play School (2.5 - 5 Years)</li>
+                            <li>Primary & Middle School (1-8)</li>
+                            <li>High School (9-10)</li>
+                            <li>Higher Secondary (11-12)</li>
+                            <li>NEET & JEE Coaching</li>
                             <li className="pt-2 border-t border-gray-700">
                                 <span className="font-semibold text-white">Boards:</span> CBSE & State
                             </li>
