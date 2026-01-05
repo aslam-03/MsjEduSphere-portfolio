@@ -4,6 +4,7 @@ import { BookOpen, FlaskConical, Calculator, Award, Baby, Palette, Brain, Micros
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { mockData } from '../mock';
 
+
 const Courses = () => {
     // Icons for School Tuition
     const schoolIcons = [BookOpen, Calculator, FlaskConical, Award];
@@ -81,7 +82,7 @@ const Courses = () => {
                             <BookOpen className="text-[#557EAE]" size={32} />
                         </div>
                         <h3 className="text-3xl font-bold text-[#100A06]">Academic Coaching (Classes 1–12)</h3>
-                    </div>  
+                    </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {mockData.schoolCourses.map((course, index) => {

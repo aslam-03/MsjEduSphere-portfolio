@@ -63,6 +63,9 @@ const Contact = () => {
                                             MSJ Educational Academy,<br />
                                             Coimbatore, Tamil Nadu.
                                         </p>
+                                        <a href="https://share.google/Fnne9zO0j4qe2rCkq" target="_blank" rel="noopener noreferrer" className="text-xs text-[#557EAE] font-semibold hover:underline mt-1 inline-block">
+                                            View on Google Maps
+                                        </a>
                                     </div>
                                 </div>
 
@@ -105,7 +108,7 @@ const Contact = () => {
                         {/* Map */}
                         <div className="bg-gray-200 rounded-xl overflow-hidden h-56 md:h-64">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.44173117564!2d76.88483320645607!3d11.014203199732297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183edce0!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1703950000000!5m2!1sen!2sin"
+                                src="https://maps.google.com/maps?q=MSJ%20Educational%20Academy%20Coimbatore&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
